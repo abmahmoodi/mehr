@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "طراحی و توسعه وب" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <%= javascript_include_tag "application" %>
+    <%= render "layouts/navigation" %>
+        <%= yield %>
+            <script type="text/javascript">
+		$(document).ready(function() {
+			$.fn.fullpage({
+				slidesColor: ['#4BC3A1', '#4BBFC3'],
+				'navigation': true,
+				slidesNavigation: true				
+			});
+		});
+
+	</script>
+  </body>
+</html>

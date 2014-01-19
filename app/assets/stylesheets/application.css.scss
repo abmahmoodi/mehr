@@ -1,0 +1,107 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ * 
+
+ *= require foundation_and_overrides
+ *= require jquery.fullPage
+ *= require animate.css
+ *= require_self
+
+ *= require_tree .
+ */
+
+@font-face {
+  font-family: 'BYekan';
+  src: url('BYekan.eot?#') format('eot'),  /* IE6–8 */
+       url('BYekan.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('BYekan.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+@font-face {
+  font-family: 'BHoma';
+  src: url('BHoma.eot?#') format('eot'),  /* IE6–8 */
+       url('BHoma.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('BHoma.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+@font-face {
+  font-family: 'BKoodakBold';
+  src: url('BKoodakBold.eot?#') format('eot'),  /* IE6–8 */
+       url('BKoodakBold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('BKoodakBold.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+body {
+	background: #fcfff4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfff4), color-stop(40%,#dfe5d7), color-stop(100%,#b3bead)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
+}
+
+.top-bar-section ul li > a {
+  font-family: bhoma;
+  font-size: 16px;
+  -webkit-font-smoothing:antialiased;
+  -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
+            
+  transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+.top-bar-section ul li:not(.name) > a:hover {
+  background: red;
+}
+
+.head {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+}
+
+.img1 {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+}
+.img2 {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+}
+.img3 {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+}
+
+.img1 img:hover, .img2 img:hover, .img3 img:hover {
+  -webkit-font-smoothing:antialiased;
+  -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+  -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
+            
+  transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+  opacity:0.8;
+}
+
+.row.contact {
+  margin-top: 75px;
+}
+
+h1, h2, h3, h4 {
+  color: black;
+}
+
+textarea {
+  height: 100px;
+}
+

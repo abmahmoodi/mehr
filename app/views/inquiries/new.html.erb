@@ -1,0 +1,51 @@
+<div class="row small-centered columns contact">
+	<div class="large-6 columns" style="margin-top: 20px;">
+		<div class="row" style="margin-bottom: 10px;">
+			<div class="large-6 columns" style="margin-bottom: 10px; font-family: BKoodakBold;">
+				<i class="fa fa-envelope-o fa-lg" ></i>
+				ایمیل: msd.soft@gmail.com
+			</div>
+		</div>
+		<div class="row" style="margin-bottom: 10px; font-family: BKoodakBold;">
+			<div class="large-6 columns">
+				<i class="fa fa-mobile fa-lg" ></i>
+				مبایل: 09370027366
+			</div>
+		</div>
+	</div>
+		
+	<%= simple_form_for @inquiry, html: {class: 'custom', :novalidate => true} do |f| %>
+	<div class="large-6 columns">
+		<h1>ارسال پیام</h1>
+		<p>
+			لطفا فرم زیر را تکمیل نموده و برای ما ارسال کنید.
+		</p>
+		<div class="row collapse">
+			<div class="small-3 large-2 columns">
+				<span class="prefix"><i class="fa fa-user fa-lg" ></i></span>
+			</div>
+			<div class="small-9 large-10 columns">
+				<%= f.input :name, label: false, placeholder: "نام" %>
+			</div>
+		</div>
+
+		<div class="row collapse">
+			<div class="small-3 large-2 columns">
+				<span class="prefix"><i class="fa fa-envelope fa-lg" ></i></span>
+			</div>
+			<div class="small-9 large-10 columns">
+				<%= f.input :email, required: false, label: false, placeholder: "ایمیل" %>
+			</div>
+		</div>
+		<div class="row collapse">
+			<div class="large-14 columns">
+				<%= f.input :message, required: false, label: false, as: :text, required: true, placeholder: "پیام" %>
+				<%= f.submit "ارسال پیام", class: 'button tiny success large-12' %>
+			</div>
+		</div>
+	</div>
+
+	<% end %>
+
+</div>
+

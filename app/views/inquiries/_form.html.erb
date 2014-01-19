@@ -1,0 +1,29 @@
+<%= simple_form_for inquiry do |f| %>
+<div style="display: none;">
+	<%= f.label :nickname %>
+	<%= f.text_field :nickname %>
+</div>
+<div class="row">
+	<div class="large-4 columns">
+		<%= f.input :name, label: 'نام' %>
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="large-4 columns">
+		<%= f.input :email, label: 'آدرس ایمیل' %>
+	</div>
+</div>
+<div class="row">
+	<div class="large-7 columns">
+		<%= f.input :message, label: 'پیام', as: :text, :input_html => { :rows => 7 }, required: true %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-4 columns">
+		<%= f.submit "ارسال", class: 'button small success' %>
+	</div>
+</div>
+<% end %>

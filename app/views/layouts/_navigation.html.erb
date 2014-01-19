@@ -1,0 +1,26 @@
+<div class="contain-to-grid fixed">
+	<nav class="top-bar" data-topbar>
+
+		<section class="top-bar-section">
+			<!-- Right Nav Section -->
+			<ul class="right">
+				<li class="<%= 'active' if params[:controller] == 'home' %>">
+					<%= link_to 'صفحه اصلی', root_path %>
+				</li>
+				<li class="<%= 'active' if params[:controller] == 'inquiries' %>">
+					<%= link_to 'تماس با ما', controller: '/inquiries', action: 'new' %>
+				</li>
+			</ul>
+
+			<!-- Left Nav Section -->
+
+		</section>
+		<ul class="left title-area">
+
+			<li class="name">
+				<h1><%= link_to 'WebDrr', root_path %></h1>
+			</li>
+
+		</ul>
+	</nav>
+</div>
