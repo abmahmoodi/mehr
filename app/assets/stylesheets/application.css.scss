@@ -68,19 +68,41 @@ body {
 .head {
   -webkit-animation-delay: 4s;
   -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.head1 {
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.head2 {
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
 }
 
 .img1 {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
 }
 .img2 {
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
 }
 .img3 {
   -webkit-animation-delay: 3s;
   -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
 }
 
 .img1 img:hover, .img2 img:hover, .img3 img:hover {
