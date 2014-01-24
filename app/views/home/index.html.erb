@@ -13,13 +13,13 @@
 		<h4 class="head animated slideInDown">آخرین کارهای انجام شده</h4>
 		<hr />
 		<div class="small-4 columns img1 animated slideInDown" >
-			<%= link_to image_tag('report.jpg'), "http://report2.darestan.ir" %>
+			<%= link_to image_tag('report.jpg'), "http://report2.darestan.ir", :target => "_blank" %>
 		</div>
 		<div class="small-4 columns img2 animated slideInDown">
-			<%= link_to image_tag('zamin.jpg'), "http://zaminha.ir" %>
+			<%= link_to image_tag('zamin.jpg'), "http://zaminha.ir", :target => "_blank" %>
 		</div>
 		<div class="small-4 columns img3 animated slideInDown">
-			<%= link_to image_tag('darestan.jpg'), "http://darestan.ir" %>
+			<%= link_to image_tag('darestan.jpg'), "http://darestan.ir", :target => "_blank" %>
 		</div>
 	</div>
 </div>
@@ -33,3 +33,47 @@
 		</div>
 	</div>
 </div>
+<div class="section">
+	<div class="row foot">
+			<div class="large-4 columns">
+				<ul class="small-block-grid-4">
+						<p style="font-size: 15px;">
+							راه های ارتباط با ما در شبکه های اجتماعی
+						</p>
+					<li><%= link_to image_tag("googleplus.png"), "https://google.com/+AbolfazlMahmoodi", :target => "_blank" %>
+					</li>
+					<li><%= link_to image_tag("linkedin.png"), "http://ir.linkedin.com/pub/abolfazl-mahmoodi/2b/779/12a", :target => "_blank" %>
+					</li>
+					<li><%= link_to image_tag("facebook.png"), "https://www.facebook.com/webdrr", :target => "_blank" %>
+					</li>
+					<li><%= link_to image_tag("twitter.png"), "https://twitter.com/webdrr", :target => "_blank" %>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="large-4 columns">
+				<div class="row tit">
+					<p>
+						تماس با ما
+					</p>
+				</div>
+				<div class="row det">
+					<p>
+						ایمیل: msd.soft@gmail.com
+					</p>
+				</div>
+				<div class="row det">
+					<p>
+						موبایل: 09370027366
+					</p>
+				</div>
+			</div>
+			<div class="large-4 columns latin">
+				<div class="row">
+					<h2>WEBDRR</h2>
+					<p>Web Development with Ruby on Rails</p>
+				</div>
+			</div>
+	</div>
+</div>
+
