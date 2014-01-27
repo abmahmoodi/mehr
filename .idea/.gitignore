@@ -1,0 +1,11 @@
+/.generators
+/.name
+/.rakeTasks
+/dataSources.ids
+/dataSources.xml
+/encodings.xml
+/misc.xml
+/modules.xml
+/mywebsite.iml
+/vcs.xml
+/workspace.xml
