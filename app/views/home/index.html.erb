@@ -77,7 +77,7 @@
 </div>
 <div class="section">
 	<div class="row foot">
-			<div class="large-4 columns">
+			<div class="large-6 columns">
 				<ul class="small-block-grid-4">
 						<p style="font-size: 15px;">
 							راه های ارتباط با ما در شبکه های اجتماعی
@@ -92,9 +92,7 @@
 					</li>
 					
 				</ul>
-			</div>
-			<div class="large-4 columns">
-				<div class="row tit">
+        <div class="row tit">
 					<p>
 						تماس با ما
 					</p>
@@ -110,39 +108,36 @@
 					</p>
 				</div>
 			</div>
-			<div class="large-4 columns latin">
+			<div class="large-6 columns latin">
 				<div class="row">
           <%= simple_form_for Inquiry.new do |f| %>
-<div style="display: none;">
-	<%= f.label :nickname %>
-	<%= f.text_field :nickname %>
-</div>
-<div class="row">
-	<div class="large-4 columns">
-		<%= f.input :name, label: 'نام' %>
-	</div>
+          <div style="display: none;">
+	          <%= f.label :nickname %>
+	          <%= f.text_field :nickname %>
+          </div>
+          <div class="row">
+	          <div class="large-4 columns">
+		          <%= f.input :name, label: 'نام' %>
+	          </div>
+          </div>
 
-</div>
+          <div class="row">
+	          <div class="large-4 columns">
+		          <%= f.input :email, label: 'آدرس ایمیل' %>
+	          </div>
+          </div>
+          <div class="row">
+	          <div class="large-7 columns">
+		          <%= f.input :message, label: 'پیام', as: :text, :input_html => { :rows => 7 }, required: true %>
+	          </div>
+          </div>
 
-<div class="row">
-	<div class="large-4 columns">
-		<%= f.input :email, label: 'آدرس ایمیل' %>
-	</div>
-</div>
-<div class="row">
-	<div class="large-7 columns">
-		<%= f.input :message, label: 'پیام', as: :text, :input_html => { :rows => 7 }, required: true %>
-	</div>
-</div>
-
-<div class="row">
-	<div class="large-4 columns">
-		<%= f.submit "ارسال", class: 'button small success' %>
-	</div>
-</div>
-<% end %>
-					<h2>WEBDRR</h2>
-					<p>Web Development with Ruby on Rails</p>
+          <div class="row">
+	          <div class="large-4 columns">
+		          <%= f.submit "ارسال", class: 'button small success' %>
+	          </div>
+          </div>
+        <% end %>
 				</div>
 			</div>
 	</div>
