@@ -108,38 +108,39 @@
 					</p>
 				</div>
 			</div>
-			<div class="large-6 columns latin">
-				<div class="row">
-          <%= simple_form_for Inquiry.new do |f| %>
-          <div style="display: none;">
-	          <%= f.label :nickname %>
-	          <%= f.text_field :nickname %>
-          </div>
-          <div class="row">
-	          <div class="large-4 columns">
-		          <%= f.input :name, label: 'نام' %>
-	          </div>
-          </div>
-
-          <div class="row">
-	          <div class="large-4 columns">
-		          <%= f.input :email, label: 'آدرس ایمیل' %>
-	          </div>
-          </div>
-          <div class="row">
-	          <div class="large-7 columns">
-		          <%= f.input :message, label: 'پیام', as: :text, :input_html => { :rows => 7 }, required: true %>
-	          </div>
-          </div>
-
-          <div class="row">
-	          <div class="large-4 columns">
-		          <%= f.submit "ارسال", class: 'button small success' %>
-	          </div>
-          </div>
-        <% end %>
-				</div>
+<%= simple_form_for Inquiry.new, html: {class: 'custom', :novalidate => true} do |f| %>
+	<div class="large-6 columns">
+		<h1>ارسال پیام</h1>
+		<p>
+			لطفا فرم زیر را تکمیل نموده و برای ما ارسال کنید.
+		</p>
+		<div class="row collapse">
+			<div class="small-3 large-2 columns">
+				<span class="prefix"><i class="fa fa-user fa-lg" ></i></span>
 			</div>
+			<div class="small-9 large-10 columns">
+				<%= f.input :name, label: false, placeholder: "نام" %>
+			</div>
+		</div>
+
+		<div class="row collapse">
+			<div class="small-3 large-2 columns">
+				<span class="prefix"><i class="fa fa-envelope fa-lg" ></i></span>
+			</div>
+			<div class="small-9 large-10 columns">
+				<%= f.input :email, required: false, label: false, placeholder: "ایمیل" %>
+			</div>
+		</div>
+		<div class="row collapse">
+			<div class="large-14 columns">
+				<%= f.input :message, required: false, label: false, as: :text, required: true, placeholder: "پیام" %>
+				<%= f.submit "ارسال پیام", class: 'button tiny success large-12' %>
+			</div>
+		</div>
+	</div>
+
+	<% end %>
+    
 	</div>
 </div>
 
