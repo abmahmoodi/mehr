@@ -36,7 +36,7 @@ end
 gem 'cancan'
 gem 'devise', '>= 3.0.3'
 gem 'figaro'
-gem 'rolify'
+gem 'rolify', '3.3.0.rc4'
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 group :development do
   gem 'better_errors'
