@@ -7,7 +7,8 @@ class InquiriesController < ApplicationController
   def create
     @inquiry = Inquiry.new(params[:inquiry])
     if @inquiry.deliver
-      render :thank_you
+      redirect_to root_path
+      #render :thank_you
     else
       render :new
     end
