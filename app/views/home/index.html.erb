@@ -3,7 +3,7 @@
     <div class="small-6 small-centered columns">
 
       <div class="small-4 columns">
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flip-container animated bounceIn" ontouchstart="this.classList.toggle('hover');">
           <div class="flipper">
             <div class="front">
               <img src="/images/intro/dev.jpg">
@@ -17,7 +17,7 @@
       </div>
 
       <div class="small-4 columns">
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flip-container animated bounceIn" ontouchstart="this.classList.toggle('hover');">
           <div class="flipper">
             <div class="front">
               <img src="/images/intro/wd.jpg">
@@ -31,7 +31,7 @@
       </div>
 
       <div class="small-4 columns">
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flip-container animated bounceIn" ontouchstart="this.classList.toggle('hover');">
           <div class="flipper">
             <div class="front">
               <img src="/images/intro/gd.jpg">
@@ -83,7 +83,8 @@
           <p style="font-size: 15px;">
             راه های ارتباط با ما در شبکه های اجتماعی
           </p>
-          <li><%= link_to image_tag("googleplus.png"), "https://google.com/+AbolfazlMahmoodi", :target => "_blank" %>
+          <li>
+            <%= link_to image_tag("googleplus.png"), "https://google.com/+AbolfazlMahmoodi", :target => "_blank" %>
           </li>
           <li><%= link_to image_tag("linkedin.png"), "http://ir.linkedin.com/pub/abolfazl-mahmoodi/2b/779/12a", :target => "_blank" %>
           </li>
@@ -93,25 +94,23 @@
           </li>
 
         </ul>
-        <div class="row tit">
+        
+      </div>
+      <div class="row tit" style="margin-right: 15px;">
           <p>
             تماس با ما
           </p>
         </div>
-        <div class="row det">
+        <div class="row det" style="margin-right: 15px;">
           <p>
             ایمیل: msd.soft@gmail.com
           </p>
         </div>
-        <div class="row det">
+        <div class="row det" style="margin-right: 15px;">
           <p>
             موبایل: 09370027366
           </p>
         </div>
-      </div>
-      <div class="row">
-
-      </div>
     </div>
     <%= simple_form_for Inquiry.new, html: {class: 'custom'} do |f| %>
         <div class="large-6 columns">

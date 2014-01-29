@@ -117,6 +117,13 @@ body {
   opacity:0.8;
 }
 
+.flip-container {
+   -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s; 
+}
+
 .foot p {
   color: white;
   font-family: bhoma;
