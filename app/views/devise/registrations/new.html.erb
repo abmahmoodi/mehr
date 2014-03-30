@@ -1,0 +1,21 @@
+<div class="row">
+	<h4>ثبت نام در سایت</h4>
+</div>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {novalidate: true}) do |f| %>
+<%= f.error_notification %>
+<div class="row">
+	<div class="large-4 columns">
+		<%= f.input :email, lable: 'آدرس ایمیل', :required => true, :autofocus => true %>
+		<%= f.input :password, lable: 'کلمه عبور', :required => true %>
+		<%= f.input :password_confirmation, lable: 'تایید کلمه عبور', :required => true %>
+	</div>
+</div>
+<div class="row">
+	<div class="large-4 columns">
+	<%= f.button :submit, "ذخیره اطلاعات" %>
+	</div>
+</div>
+<% end %>
+<div class="row">
+	<%= render "devise/shared/links" %>
+</div>

@@ -202,4 +202,231 @@ textarea {
 	margin:0;
 }
 
+.sec-art article {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
 
+.sec-art footer a {
+  font-family: tahoma;
+  font-size: 12px;
+  text-decoration: none;
+  float: left;
+}
+
+.sec-art p {
+  font-family: tahoma;
+  font-size: 12px;
+  width: 800px;
+}
+
+.sec-art figure img {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.sec-art header a {
+  text-decoration: none;
+  color: #4F047A;
+  font-size: 20px;
+}
+
+#post-body p {
+  font-family: tahoma;
+  font-size: 13px;
+  text-decoration: none;
+}
+#post-body a {
+  font-family: tahoma;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#post-detail{
+  font-size: 11px;
+  color: #999;
+  font-family: tahoma;
+}
+
+#post-detail{
+  font-size: 11px;
+  color: #999;
+  font-family: tahoma;
+}
+
+img.textbottom {
+  vertical-align: bottom;
+}
+
+section {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 10px;
+}
+
+section:hover {
+  -webkit-box-shadow: 0 5px 10px #999999;
+  box-shadow: 0 5px 10px #999999;
+  background: #acd7e5;
+}
+
+.row.post {
+  padding-top: 50px;
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity:0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#forms {
+  width: 98.63013698630137%;
+  margin: 1em 0;
+  border: 1px solid #D8D8D8;
+  position: relative;
+  background-color: #fafafa;
+  -webkit-border-radius: 12px 0 12px 12px;
+  -moz-border-radius: 12px 0 12px 12px;
+  -ms-border-radius: 12px 0 12px 12px;
+  -o-border-radius: 12px 0 12px 12px;
+  border-radius: 12px 0 12px 12px;
+  -webkit-box-shadow: 0px 2px 3px 0px #f0f0f0;
+  -moz-box-shadow: 0px 2px 3px 0px #f0f0f0;
+  box-shadow: 0px 2px 3px 0px #f0f0f0;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+#forms a {
+  text-decoration: none;
+  font-family: tahoma;
+  font-size: 12px;
+}
+
+#placeholder_1 {
+  width: 100%;
+  height: 400px;
+}
+#placeholder_2 {
+  width: 100%;
+  height: 400px;
+}
+#placeholder_3 {
+  width: 100%;
+  height: 400px;
+}
+#placeholder_4 {
+  width: 100%;
+  height: 400px;
+}
+
+#info_w,  #info_w a {
+  font-family: byekan;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+#detail {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: rgb(212, 212, 241);
+  padding: 10px;
+  text-align: center;
+}
+#detail strong {
+  font-family: byekan;
+}
+
+#login-form {
+  width: 20%;
+  //margin: 0 auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(212, 212, 241);
+  padding: 10px;
+  text-decoration: none;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+
+}
+
+#header {
+  font-family: byekan;
+  font-size: 25px;
+  text-align: center;
+}
+#header a {
+  text-decoration: none;
+}
+
+#des-table{
+  width: 50%;
+}
+
+.general {
+  font-family: tahoma;
+  font-size: 12px;
+  text-indent:50px;
+}
+.header-4 {
+  text-indent:50px;
+}
+
+.alert {
+  font-family: tahoma;
+  font-size: 12px;
+}
+
+.controls table tbody tr td select, input {
+  font-family: tahoma;
+  font-size: 11px;
+}
+
+.controls input {
+  font-family: tahoma;
+  font-size: 11px;
+}
+
+.controls textarea {
+  font-family: tahoma;
+  font-size: 11px;
+  width: 300px;
+  height: 75px;
+}
+.tooltip {
+  font-family: tahoma;
+  font-size: 11px;
+}

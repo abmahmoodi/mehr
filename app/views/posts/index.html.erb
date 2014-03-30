@@ -1,29 +1,38 @@
-<h1>Listing posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<%= render 'layouts/navigation' %>
+<div class="row post">
+  <header>
+    <h4> مطالب وبلاگ </h4>
+  </header>
+  <br/>
+  <% @posts.each do |post| %>
+      <section class="sec-art">
+        <article>
+          <figure style="float: right;">
+            <%= cl_image_tag(post.picture, :width => 100, :height => 100, crop: :fit) %>
+          </figure>
+          <header>
+            <h4><%= link_to post.title, post %></h4>
+            <span id="post-detail"><i class="icon-calendar icon-large"></i> <%= JalaliDate.to_jalali(post.created_at).strftime("%d %B %Y") %></span>
+          </header>
+          <div>
+            <p>
+              <!--
+				<%= truncate(raw(post.body.gsub(/(<[^>]+>)/, '')), length: 250, :separator => '') %>
+-->
+              <%= sanitize(post.body, :tags => []).truncate(250, :separator => " ").html_safe %>
+            </p>
+            <footer>
+              <%= link_to 'ادامه مطلب', post %>
+              <% if user_signed_in? %>
+                  <% if current_user.has_role? :admin %>
+                      | <%= link_to 'حذف مطلب', post, method: :delete, data: {confirm: 'آیا اطمینان دارید؟'} %>
+                  <% end %>
+              <% end %>
+            </footer>
+          </div>
+        </article>
+      </section>
+  <% end %>
+</div>
 <br>
 
-<%= link_to 'New Post', new_post_path %>

@@ -1,0 +1,19 @@
+
+development:
+  cloud_name: dtucxbcfa
+  api_key: '142649559247329'
+  api_secret: 47EhvtrAQzAhxF165M20pvgPQs8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dtucxbcfa
+  api_key: '142649559247329'
+  api_secret: 47EhvtrAQzAhxF165M20pvgPQs8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dtucxbcfa
+  api_key: '142649559247329'
+  api_secret: 47EhvtrAQzAhxF165M20pvgPQs8
+  enhance_image_tag: true
+  static_image_support: false

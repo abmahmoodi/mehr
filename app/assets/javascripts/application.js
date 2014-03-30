@@ -17,6 +17,9 @@
 //= require jquery.fullPage
 //= require foundation
 
+//= require ckeditor/override
+//= require ckeditor/init
+//= require cloudinary
 
 //= require_tree .
 

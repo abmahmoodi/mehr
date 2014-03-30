@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html dir="rtl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="طراحی و توسعه وب سایت و وب اپلیکیشن با استفاده روبی ان ریلز، جاوا اسکریپت." />
-    <meta name="keywords" content="طراحی و برنامه نویسی وب,وب اپلیکیشن, Web Application,Ruby on Rails,Jquery,HTML,CSS,XML,JavaScript" />
-    <meta name="author" content="Abolfazl Mahmoodi" />
-    
-    <title><%= content_for?(:title) ? yield(:title) : "طراحی و توسعه وب" %></title>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="طراحی و توسعه وب سایت و وب اپلیکیشن با استفاده روبی ان ریلز، جاوا اسکریپت."/>
+  <meta name="keywords" content="طراحی و برنامه نویسی وب,وب اپلیکیشن, Web Application,Ruby on Rails,Jquery,HTML,CSS,XML,JavaScript"/>
+  <meta name="author" content="Abolfazl Mahmoodi"/>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= csrf_meta_tags %>
+  <title><%= content_for?(:title) ? yield(:title) : "طراحی و توسعه وب" %></title>
 
-  </head>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= csrf_meta_tags %>
 
-  <body>
-    <%= javascript_include_tag "application" %>
-    <!--<%= render "layouts/navigation" %>-->
-    <ul id="menu">
-	    <li data-menuanchor="firstPage"><a href="#firstPage">معرفی</a></li>
-	    <li data-menuanchor="secondPage"><a href="#secondPage">تکنولوژی ها</a></li>
-	    <li data-menuanchor="3rdPage"><a href="#3rdPage">تماس با ما</a></li>
-    </ul>
-    <%= yield %>
-    
-            <script type="text/javascript">
-		$(document).ready(function() {
-			$.fn.fullpage({
-        easing: 'easeInQuart',
-				slidesColor: ['#4BC3A1', '#4BBFC3', '#383838'],
-				'navigation': true,
-				slidesNavigation: true,
-        anchors: ['firstPage', 'secondPage', '3rdPage'],
-				menu: '#menu'
-			});
-		});
+</head>
 
-	</script>
-  </body>
+<body>
+<%= javascript_include_tag "application" %>
+
+<%= yield %>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.fn.fullpage({
+            easing: 'easeInQuart',
+            slidesColor: ['#4BC3A1', '#4BBFC3', '#383838'],
+            'navigation': true,
+            slidesNavigation: true,
+            anchors: ['firstPage', 'secondPage', '3rdPage'],
+            menu: '#menu'
+        });
+    });
+
+</script>
+</body>
 </html>

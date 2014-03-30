@@ -1,4 +1,8 @@
 Mywebsite::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+  devise_for :admins
+  devise_for :users
+
   get "home/index"
   resources :posts
   root 'home#index'

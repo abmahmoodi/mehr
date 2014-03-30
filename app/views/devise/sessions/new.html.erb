@@ -1,0 +1,26 @@
+<div class="row inq">
+	<div class="row">
+		<h4>ورود به پنل مدیریت سایت</h4>
+	</div>
+
+	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	<div class="row">
+		<div class="large-4 columns">
+			<%= f.input :email, label: 'آدرس ایمیل', :required => false, :autofocus => true %>
+			<%= f.input :password, label: 'کلمه عبور', :required => false %>
+			<%= f.input :remember_me, label: 'مرا به یاد داشته باش', :as => :boolean if devise_mapping.rememberable? %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-4 columns">
+			<%= f.button :submit, "ورود", class: 'button tiny' %>
+		</div>
+	</div>
+	<% end %>
+<!--
+	<div class="row">
+		<%= render "devise/shared/links" %>
+		<br />
+	</div>
+-->
+</div>

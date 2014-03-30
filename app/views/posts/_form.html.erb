@@ -1,25 +1,13 @@
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<%= cloudinary_js_config %>
+<%= simple_form_for(@post) do |f| %>
+<%= f.error_notification %>
+<div class="form-inputs">
 
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<%= f.input :title, label: 'عنوان' %>
+	<%= f.file_field :picture %>
+	<%= f.cktext_area :body, :ckeditor => {:language => "fa"} %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+<br />
+<%= f.button :submit, 'ذخیره', class: 'btn tiny btn-primary' %>
 <% end %>
