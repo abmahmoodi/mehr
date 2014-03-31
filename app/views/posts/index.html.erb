@@ -16,9 +16,6 @@
           </header>
           <div>
             <p>
-              <!--
-				<%= truncate(raw(post.body.gsub(/(<[^>]+>)/, '')), length: 250, :separator => '') %>
--->
               <%= sanitize(post.body, :tags => []).truncate(250, :separator => " ").html_safe %>
             </p>
             <footer>

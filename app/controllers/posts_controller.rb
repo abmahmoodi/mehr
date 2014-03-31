@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     if !current_user.has_role? :admin
-      render '/posts'
+      render action: 'index'
       flash[:error] = 'مجوز دسترسی وجود ندارد'
     end
     @post = Post.new
