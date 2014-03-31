@@ -1,6 +1,31 @@
 # encoding: utf-8
 class CkeditorPictureUploader < CarrierWave::Uploader::Base
+ 
+  include Cloudinary::CarrierWave
   include Ckeditor::Backend::CarrierWave
+  
+  process :convert => 'png'
+  process :tags => ['post_picture']
+  [:extract_content_type, :set_size, :read_dimensions].each do |method|
+    define_method :"#{method}_with_cloudinary" do
+      send(:"#{method}_without_cloudinary") if self.file.is_a?(CarrierWave::SanitizedFile)
+      {}
+    end
+    alias_method_chain method, :cloudinary
+  end
+  
+  #process :read_dimensions
+  version :thumb do
+    process :resize_to_fill => [118, 100]
+  end
+
+  version :content do
+    process :resize_to_limit => [800, 800]
+  end
+ 
+=begin
+  include Ckeditor::Backend::CarrierWave
+  include Cloudinary::CarrierWave
 
   # Include RMagick or ImageScience support:
   # include CarrierWave::RMagick
@@ -9,7 +34,6 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   storage :file
-
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
@@ -27,6 +51,13 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
+  [:extract_content_type, :set_size, :read_dimensions].each do |method|
+    define_method :"#{method}_with_cloudinary" do
+      send(:"#{method}_without_cloudinary") if self.file.is_a?(CarrierWave::SanitizedFile)
+      {}
+    end
+    alias_method_chain method, :cloudinary
+  end
   
   process :read_dimensions
 
@@ -44,4 +75,5 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
   def extension_white_list
     Ckeditor.image_file_types
   end
+=end
 end
