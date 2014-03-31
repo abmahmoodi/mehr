@@ -6,11 +6,10 @@
     <%= raw @post.body %>
     <% if user_signed_in? %>
         <% if current_user.has_role? :admin %>
-            <%= link_to 'ویرایش', edit_post_path(@post) %>
-            |
+            <%= link_to 'ویرایش', edit_post_path(@post), class: 'button btn tiny btn-primary' %>
         <% end %>
     <% end %>
 
-    <%= link_to 'بازگشت', posts_path %>
+    <%= link_to 'بازگشت', posts_path, class: 'button btn tiny btn-primary' %>
   </div>
 </div>

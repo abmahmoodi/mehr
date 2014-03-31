@@ -939,11 +939,12 @@ $button-font-size: 12px;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
- $topbar-bg-color: #0053BF;
- $topbar-bg: $topbar-bg-color;
+// $topbar-bg-color: #3D3D3D;
+ $topbar-bg-color: #FA6634;
+// $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+ $topbar-height: 45px;
 // $topbar-margin-bottom: 0;
 
 // Control Input height for top bar
@@ -962,13 +963,13 @@ $button-font-size: 12px;
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
+ $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: normal;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
- $topbar-link-bg-hover: #D90210  ;
- $topbar-link-bg-active: #D90210;
+ $topbar-link-bg-hover: #A82D03;
+ $topbar-link-bg-active: #084237;
 // $topbar-link-bg-active-hover: darken($primary-color, 5%);
 // $topbar-link-font-family: $body-font-family;
 
@@ -1000,6 +1001,6 @@ $button-font-size: 12px;
 // $topbar-divider-border-top: solid 1px darken($topbar-bg-color, 10%);
 
 // Sticky Class
- $topbar-sticky-class: ".sticky";
+// $topbar-sticky-class: ".sticky";
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 @import 'foundation';

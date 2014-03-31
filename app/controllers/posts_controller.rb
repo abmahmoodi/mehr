@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, only: [:create, :edit, :new, :destroy]
+  #load_and_authorize_resource
   # GET /posts
   # GET /posts.json
   def index
@@ -14,6 +15,10 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    if !current_user.has_role? :admin
+      render '/posts'
+      flash[:error] = 'مجوز دسترسی وجود ندارد'
+    end
     @post = Post.new
   end
 

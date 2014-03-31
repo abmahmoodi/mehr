@@ -22,10 +22,10 @@
               <%= sanitize(post.body, :tags => []).truncate(250, :separator => " ").html_safe %>
             </p>
             <footer>
-              <%= link_to 'ادامه مطلب', post %>
+              <%= link_to 'ادامه مطلب', post, class: 'btn tiny btn-primary' %>
               <% if user_signed_in? %>
                   <% if current_user.has_role? :admin %>
-                      | <%= link_to 'حذف مطلب', post, method: :delete, data: {confirm: 'آیا اطمینان دارید؟'} %>
+                      <%= link_to 'حذف مطلب', post, method: :delete, data: {confirm: 'آیا اطمینان دارید؟'} %>
                   <% end %>
               <% end %>
             </footer>

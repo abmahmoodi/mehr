@@ -1,11 +1,35 @@
-<div class="contain-to-grid fixed">
-	<nav class="top-bar" data-topbar>
-		<ul class="left title-area">
+<div class="contain-to-grid">
+  <nav class="top-bar" data-topbar>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right nav">
+        <li class="divider"></li>
+        <li class="<%= 'active' if params[:controller] == 'home' %>">
+          <%= link_to 'صفحه اصلی', root_path %>
+        </li>
+        <li>
+          <%= link_to 'وبلاگ', posts_path %>
+        </li>
+      </ul>
 
-			<li class="name">
-				<h1><%= link_to 'Ruby Webit', root_path %></h1>
-			</li>
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <% if user_signed_in? %>
+            <li>
+              <%= link_to 'مطلب جدید', new_post_url %>
+            </li>
+            <li>
+              <%= link_to 'ایمیل: ' + current_user.email, '#' %>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to 'خروج <i class="fa fa-sign-out" ></i>'.html_safe, destroy_user_session_path,
+                          :method => 'delete' %>
+            </li>
+        <% end %>
 
-		</ul>
-	</nav>
+      </ul>
+    </section>
+
+  </nav>
 </div>

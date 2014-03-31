@@ -46,7 +46,7 @@
   -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
   -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
   -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
-            
+
   transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 
@@ -260,7 +260,7 @@ img.textbottom {
   vertical-align: bottom;
 }
 
-section {
+section.sec-art {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -269,7 +269,7 @@ section {
   padding: 10px;
 }
 
-section:hover {
+section.sec-art:hover {
   -webkit-box-shadow: 0 5px 10px #999999;
   box-shadow: 0 5px 10px #999999;
   background: #acd7e5;
@@ -277,6 +277,10 @@ section:hover {
 
 .row.post {
   padding-top: 50px;
+}
+
+.nav.nav-pills a {
+  color: #ffffff;
 }
 
 @keyframes fadein {
