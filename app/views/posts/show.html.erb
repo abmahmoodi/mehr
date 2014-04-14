@@ -3,7 +3,9 @@
 <div class="row post">
   <div id="post-body">
     <h4> <%= @post.title %> </h4>
+    <i class="fa fa-calendar" ></i>
     <span id="post-detail"><%= JalaliDate.to_jalali(@post.created_at).strftime("%d %B %Y") %></span>
+    <hr>
     <%= raw @post.body %>
     <% if user_signed_in? %>
         <% if current_user.has_role? :admin %>

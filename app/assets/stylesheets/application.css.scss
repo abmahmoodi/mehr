@@ -279,6 +279,24 @@ section.sec-art:hover {
   padding-top: 50px;
 }
 
+.row.post img {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #eeeeee;
+  padding: 5px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.row.post a:not(.button) {
+  color: #fa6634;
+}
+
+.row.post a:hover:not(.button) {
+  color: #B00100;
+}
+
 .nav.nav-pills a {
   color: #ffffff;
 }
