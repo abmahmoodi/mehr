@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.order('created_at desc').all
+    @random_posts = Post.random_posts
   end
 
   # GET /posts/1

@@ -6,4 +6,8 @@ class Post < ActiveRecord::Base
     normalized_title = title.gsub(' ', '-')
     "#{self.id}-#{normalized_title}"
   end
+
+  def self.random_posts
+    Post.order('random()').first(5)
+  end
 end

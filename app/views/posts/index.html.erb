@@ -1,35 +1,51 @@
 <%= render 'layouts/navigation' %>
 <div class="row post">
-  <header>
-    <h4> مطالب وبلاگ </h4>
-  </header>
-  <br/>
-  <% @posts.each do |post| %>
-      <section class="sec-art">
-        <article>
-          <figure style="float: right;">
-            <%= cl_image_tag(post.picture, :width => 100, :height => 100, crop: :fit) %>
-          </figure>
-          <header>
-            <h4><%= link_to post.title, post %></h4>
-            <span id="post-detail"><i class="icon-calendar icon-large"></i> <%= JalaliDate.to_jalali(post.created_at).strftime("%d %B %Y") %></span>
-          </header>
-          <div>
-            <p>
-              <%= sanitize(post.body, :tags => []).truncate(250, :separator => " ").html_safe %>
-            </p>
-            <footer>
-              <%= link_to 'ادامه مطلب', post, class: 'btn tiny btn-primary' %>
-              <% if user_signed_in? %>
-                  <% if current_user.has_role? :admin %>
-                      <%= link_to 'حذف مطلب', post, method: :delete, data: {confirm: 'آیا اطمینان دارید؟'} %>
-                  <% end %>
-              <% end %>
-            </footer>
-          </div>
-        </article>
-      </section>
-  <% end %>
+  <div class="small-6 large-8 columns">
+    <header>
+      <h4> مطالب وبلاگ </h4>
+    </header>
+    <br/>
+    <% @posts.each do |post| %>
+        <section class="sec-art">
+          <article>
+            <figure style="float: right;">
+              <%= cl_image_tag(post.picture, :width => 100, :height => 100, crop: :fit) %>
+            </figure>
+            <header>
+              <h4><%= link_to post.title, post %></h4>
+              <span id="post-detail"><i class="icon-calendar icon-large"></i> <%= JalaliDate.to_jalali(post.created_at).strftime("%d %B %Y") %></span>
+            </header>
+            <div>
+              <p>
+                <%= sanitize(post.body, :tags => []).truncate(250, :separator => " ").html_safe %>
+              </p>
+              <footer>
+                <%= link_to 'ادامه مطلب', post, class: 'btn tiny btn-primary' %>
+                <% if user_signed_in? %>
+                    <% if current_user.has_role? :admin %>
+                        <%= link_to 'حذف مطلب', post, method: :delete, data: {confirm: 'آیا اطمینان دارید؟'} %>
+                    <% end %>
+                <% end %>
+              </footer>
+            </div>
+          </article>
+        </section>
+    <% end %>
+  </div>
+  <div class="small-6 large-4 columns random">
+    <div class="row header">
+      <h4>مطالب تصادفی</h4>
+    </div>
+
+    <% @random_posts.each do |rand_post| %>
+        <div class="row rand-post">
+          <%= link_to rand_post.title, rand_post %>
+          <br>
+        </div>
+
+    <% end %>
+  </div>
+
 </div>
-<br>
+
 
