@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order('created_at desc').all
+    @posts = Post.order('created_at desc').paginate(:page => params[:page], :per_page => 5)
     @random_posts = Post.random_posts
   end
 

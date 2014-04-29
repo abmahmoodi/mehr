@@ -60,4 +60,4 @@ gem "will_paginate", git: 'git://github.com/mislav/will_paginate.git'
 gem 'foundation-rails'
 gem 'rails_12factor', group: :production
 gem 'bxslider-rails'
-
+gem 'kaminari'
