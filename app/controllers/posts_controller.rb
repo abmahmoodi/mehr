@@ -7,6 +7,13 @@ class PostsController < ApplicationController
   def index
     @posts = Post.order('created_at desc').paginate(:page => params[:page], :per_page => 5)
     @random_posts = Post.random_posts
+    @pezeshk = Feedjira::Feed.fetch_and_parse('http://feeds.1pezeshk.com/pezeshk.xml')
+    @pezeshk_entry = @pezeshk.entries
+
+    @weblogina = Feedjira::Feed.fetch_and_parse('http://feeds.weblogina.com/weblogina.xml')
+    @weblogina_entry = @weblogina.entries
+    #http://feeds.weblogina.com/weblogina
+    #http://feeds.1pezeshk.com/pezeshk
   end
 
   # GET /posts/1

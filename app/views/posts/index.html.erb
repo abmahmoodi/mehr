@@ -1,4 +1,5 @@
 <%= render 'layouts/navigation' %>
+
 <div class="row post">
   <div class="small-6 large-8 columns">
     <header>
@@ -35,17 +36,33 @@
       <%= will_paginate @posts %>
     </div>
   </div>
+  
   <div class="small-6 large-4 columns random">
     <div class="row header">
       <h4>مطالب تصادفی</h4>
     </div>
-
     <% @random_posts.each do |rand_post| %>
         <div class="row rand-post">
           <%= link_to rand_post.title, rand_post %>
           <br>
         </div>
-
+    <% end %>
+  </div>
+  <div class="small-6 large-4 columns random">
+    <div class="row header">
+      <h4>لینک های همسایه</h4>
+    </div>
+    <% @pezeshk_entry.take(5).each do |pe| %>
+        <div class="row rand-post">
+          <%= link_to "#{pe.title} (#{@pezeshk.title})", pe.url %>
+          <br>
+        </div>
+    <% end %>
+    <% @weblogina_entry.take(5).each do |pe| %>
+        <div class="row rand-post">
+          <%= link_to "#{pe.title} (#{@weblogina.title})", pe.url %>
+          <br>
+        </div>
     <% end %>
   </div>
 

@@ -61,3 +61,4 @@ gem 'foundation-rails'
 gem 'rails_12factor', group: :production
 gem 'bxslider-rails'
 gem 'kaminari'
+gem 'feedjira'
