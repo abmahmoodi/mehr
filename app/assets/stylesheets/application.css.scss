@@ -84,33 +84,41 @@
   animation-delay: 1s;
 }
 .img2 {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.img3 {
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
   -o-animation-delay: 2s;
   animation-delay: 2s;
 }
-.img3 {
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  animation-delay: 3s;
+
+.img4 {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  -o-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  margin-top: 10px;
 }
 
-.img1 img:hover, .img2 img:hover, .img3 img:hover {
+.img1 img:hover, .img2 img:hover, .img3 img:hover, .img4 img:hover {
   -webkit-font-smoothing:antialiased;
   -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
   -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
   -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
-            
+
   transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
   opacity:0.8;
 }
 
 .flip-container {
-   -webkit-animation-delay: 4s;
-  -moz-animation-delay: 4s;
-  -o-animation-delay: 4s;
-  animation-delay: 4s; 
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
 }
 
 .foot p {
