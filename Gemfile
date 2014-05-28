@@ -62,3 +62,6 @@ gem 'rails_12factor', group: :production
 gem 'bxslider-rails'
 gem 'kaminari'
 gem 'feedjira'
+gem 'redcarpet' # For the Markdown parsing
+gem 'pygments.rb'
+gem 'haml'

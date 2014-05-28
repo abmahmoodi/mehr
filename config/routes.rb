@@ -2,6 +2,9 @@ Mywebsite::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :admins
   devise_for :users
+  namespace :blog do
+    resources :articles, path: '', only: [:index, :show]
+  end
 
   get "home/index"
   resources :posts
