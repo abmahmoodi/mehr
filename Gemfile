@@ -65,3 +65,4 @@ gem 'feedjira'
 gem 'redcarpet' # For the Markdown parsing
 gem 'pygments.rb'
 gem 'haml'
+gem 'albino'

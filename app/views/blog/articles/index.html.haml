@@ -1,7 +1,10 @@
-- @articles.each do |article|
-  %article
-    %h1= link_to article.title, blog_article_path(article)
-    = render partial: "meta", locals: { article: article }
-    = preserve_markdown article.excerpt
-    - if article.has_more_text?
-      %p= link_to "Continue reading →", blog_article_path(article)
+= render 'layouts/navigation'
+.row.post
+  #post-body
+    - @articles.each do |article|
+      %article
+        %h1= link_to article.title, blog_article_path(article)
+        = render partial: "meta", locals: { article: article }
+        = preserve_markdown article.excerpt
+        - if article.has_more_text?
+          %p= link_to "ادامه →", blog_article_path(article)

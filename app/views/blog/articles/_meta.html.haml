@@ -1,5 +1,5 @@
 .meta
-  %time{ pubdate: "", datetime: article.created_at }
-    = l article.created_at, format: :long
-  by
-  = article.author
+  %span#post-detail
+    =JalaliDate.to_jalali(article.created_at).strftime("%d %B %Y")
+    نویسنده: 
+    = article.author

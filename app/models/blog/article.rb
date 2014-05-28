@@ -41,8 +41,6 @@ class Blog::Article
 
   private
   def self.article_files
-    puts 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
-    puts articles_path
     sort_by_id Dir.glob(articles_path + '/' + '*.md')
   end
 
@@ -73,5 +71,6 @@ class Blog::Article
 
   def remove_yaml_frontmatter_from(text)
     text.sub(/^\s*---(.*?)---\s/m, "")
+    #text.sub(/^\s*<!--(.*?)-->\s/m, "")
   end
 end

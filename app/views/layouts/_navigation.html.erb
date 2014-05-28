@@ -7,8 +7,11 @@
         <li class="<%= 'active' if params[:controller] == 'home' %>">
           <%= link_to 'صفحه اصلی', root_path %>
         </li>
-        <li>
+        <li class="<%= 'active' if params[:controller] == 'posts' %>">
           <%= link_to 'وبلاگ', posts_path %>
+        </li>
+        <li class="<%= 'active' if params[:controller] == 'blog/articles' %>">
+          <%= link_to 'لذت برنامه نویسی', '/blog' %>
         </li>
       </ul>
 
