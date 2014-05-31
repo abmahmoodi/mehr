@@ -1,4 +1,5 @@
 Mywebsite::Application.routes.draw do
+  get "mailer/sendmail"
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :admins
   devise_for :users
