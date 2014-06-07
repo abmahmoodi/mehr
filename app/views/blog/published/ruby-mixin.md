@@ -77,7 +77,6 @@ author: 'ابوالفضل محمودی'
 34.	et = EightTrack.new("Real Pillow")  
 35.	puts ph.who_am_i?  
 36.	puts et.who_am_i?  
-
 ```
   
 مثال های دیگر:
