@@ -80,7 +80,6 @@ author: 'ابوالفضل محمودی'
 ```
   
 مثال های دیگر:
-    
 ```ruby
 1.	#  p062stuff.rb  
 2.	#  A module may contain constants, methods and classes.  
