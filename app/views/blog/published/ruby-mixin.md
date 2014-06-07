@@ -1,5 +1,5 @@
 ---
-title: Ruby mixin'
+title: 'Ruby mixin'
 created_at: '2014-06-06'
 author: 'ابوالفضل محمودی'
 ---
