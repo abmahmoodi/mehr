@@ -38,9 +38,8 @@ author: 'ابوالفضل محمودی'
 25.	Trig.sin(Trig::PI/4)  
 26.	Moral.sin(Moral::VERY_BAD)  
 ```
-  
 دوم امکان به اشتراک گذاشتن قابلیتهای یک ماجول بین کلاس های مختلف. اگر یک کلاس با یک ماجول ترکیب شود متدهای نمونه (instance) آن ماجول در کلاس قابل دسترس است (mixin):
-```ruby    
+```ruby
 1.	# p061mixins.rb  
 2.	module D  
 3.	  def initialize(name)  
@@ -78,7 +77,6 @@ author: 'ابوالفضل محمودی'
 35.	puts ph.who_am_i?  
 36.	puts et.who_am_i?  
 ```
-  
 مثال های دیگر:
 ```ruby
 1.	#  p062stuff.rb  
