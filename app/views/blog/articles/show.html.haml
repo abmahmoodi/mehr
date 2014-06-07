@@ -5,6 +5,6 @@
       %h1= @article.title
       = render partial: "meta", locals: { article: @article }
       %hr
-      = preserve_markdown @article.content
+      = preserve_markdown((@article.content).gsub(/<!--more-->/, ''))
       %hr
       %p.action= link_to "بازگشت", blog_articles_path

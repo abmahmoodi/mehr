@@ -45,7 +45,8 @@ class Blog::Article
   end
 
   def self.sort_by_id(files)
-    files.sort_by { |x| File.basename(x, '.*').to_i }
+    # files.sort_by { |x| File.basename(x, '.*').to_i }
+    files.sort_by { |x| File.mtime(x) }
   end
 
   def self.find_file_by(name)
