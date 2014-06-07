@@ -11,6 +11,7 @@ author: 'ابوالفضل محمودی'
     <!--more-->
     
 ```ruby
+
 1.	# p058mytrig.rb  
 2.	module Trig  
 3.	  PI = 3.1416  
@@ -36,10 +37,12 @@ author: 'ابوالفضل محمودی'
 23.	require_relative 'p058mytrig'  
 24.	require_relative 'p059mymoral'  
 25.	Trig.sin(Trig::PI/4)  
-26.	Moral.sin(Moral::VERY_BAD)  
+26.	Moral.sin(Moral::VERY_BAD)
+
 ```
 دوم امکان به اشتراک گذاشتن قابلیتهای یک ماجول بین کلاس های مختلف. اگر یک کلاس با یک ماجول ترکیب شود متدهای نمونه (instance) آن ماجول در کلاس قابل دسترس است (mixin):
 ```ruby
+
 1.	# p061mixins.rb  
 2.	module D  
 3.	  def initialize(name)  
@@ -75,11 +78,13 @@ author: 'ابوالفضل محمودی'
 33.	ph = Phonograph.new("West End Blues")  
 34.	et = EightTrack.new("Real Pillow")  
 35.	puts ph.who_am_i?  
-36.	puts et.who_am_i?  
+36.	puts et.who_am_i?
+
 ```
 
 مثال های دیگر1:
 ```ruby
+
 1.	#  p062stuff.rb  
 2.	#  A module may contain constants, methods and classes.  
 3.	#  No instances  
@@ -117,7 +122,8 @@ author: 'ابوالفضل محمودی'
 35.	puts $:             # array of folders to search for load  
 36.	$: << "c:/"         # add a folder to the load path  
 37.	puts $:  
-38.	puts Stuff.m(5)     # Stuff class methods not called from D object  
+38.	puts Stuff.m(5)     # Stuff class methods not called from D object
+
 ```
   
 به خاطر داشته با شید که یک کلاس فقط میتواند توسط یک کلاس دیگر به ارث رود. اما امکان ترکیب چند ماجول با یک کلاس وجود دارد. نام کلاس بیشتر اسم هستند اما نام ماجول ها اغلب صفت هستند.  
