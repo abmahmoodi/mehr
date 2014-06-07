@@ -77,7 +77,7 @@ author: 'ابوالفضل محمودی'
 35.	puts ph.who_am_i?  
 36.	puts et.who_am_i?  
 ```
-مثال های دیگر:
+مثال های دیگر1:
 ```ruby
 1.	#  p062stuff.rb  
 2.	#  A module may contain constants, methods and classes.  
