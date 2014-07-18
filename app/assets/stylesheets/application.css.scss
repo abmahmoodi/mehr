@@ -511,9 +511,10 @@ pre {
   background-color: #F3F3F3;
   border: solid 1px #CCC;
   padding: 5px 10px;
-  font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace !important;
+  line-height: 24px !important;
   direction: ltr;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 code {
@@ -523,6 +524,13 @@ code {
   font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
   direction: ltr;
   float: left;
+}
+
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: black;
+  direction: ltr;
 }
 
 .hll { background-color: #ffffcc }
