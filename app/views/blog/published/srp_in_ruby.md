@@ -75,6 +75,57 @@ end
 ```
 
 
+در مثالی دیگر موضوع را بیشتر توضیح می دهم. فرض کنید کلاسی داریم که کار آن اعتبار سنجی نام کاربری و گذرواژه است.
+
+
+```ruby
+class AuthenticatesUser
+  def authenticate(email, password)
+    if matches?(email, password)
+     do_some_authentication
+    else
+      raise NotAllowedError
+    end
+  end
+
+  private
+  def matches?(email, password)
+    user = find_from_db(:user, email)
+    user.encrypted_password == encrypt(password)
+  end
+end
+```
+
+ در این کلاس متدی وجود دارد (authenticate) که کار آن چک کردن اعتبار نام کاربری و گذرواژه است. در اینجا متد دیگری (matches) فراخوانی می‌شود که کار خواندن نام کاربری و گذرواژه از پایگاه داده و مقایسه آن‌ها با ورودی متد میباشد. اگر دقت کنیم متوجه خواهیم شد که در این کلاس ۲ کار مختلف انجام می‌شود که مغایر با اصل SRP است. حالا با تمیز کاری کد میخواهیم این مشکل را حل کنیم:
+
+```ruby
+class AuthenticatesUser
+  def authenticate(email, password)
+    if MatchesPasswords.new(email, password).matches?
+     do_some_authentication
+    else
+      raise NotAllowedError
+    end
+  end
+end
+
+class MatchesPasswords
+  def initialize(email, password)
+     @email = email
+     @password = password
+  end
+
+  def matches?
+     user = find_from_db(:user, @email)
+    user.encrypted_password == encrypt(@password)
+  end
+end
+```
+
+به این روش Extract Class گفته می‌شود که در آن توسط [Composition](http://en.wikipedia.org/wiki/Composition_over_inheritance "Composition")  رفتار یک کلاس در کلاس دیگر به اشتراک گذاشته میشود.
+
+
+
 > 1. Object Oriented Design
 > 2. Business Rules
 
