@@ -2,6 +2,8 @@ class Post < ActiveRecord::Base
   attr_accessible :title, :body, :picture
   mount_uploader :picture, PictureUploader
 
+  DISQUS_SHORTNAME = Rails.env == "development" ? "dev_shortname".freeze : "production_shortname".freeze
+
   def to_param
     normalized_title = title.gsub(' ', '-')
     "#{self.id}-#{normalized_title}"
