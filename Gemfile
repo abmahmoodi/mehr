@@ -14,7 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-gem "ckeditor"#, :git => "git@github.com:galetahub/ckeditor.git"
+gem "ckeditor", :git => "https://github.com/galetahub/ckeditor.git"
 gem "carrierwave"
 gem 'cloudinary'
 gem 'mini_magick', :git => 'git://github.com/minimagick/minimagick.git', :ref => '6d0f8f953112cce6324a524d76c7e126ee14f392'
@@ -54,10 +54,11 @@ gem 'thin'
 gem 'newrelic_rpm'
 #gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 #gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '4.2.0'
+
 gem "will_paginate", git: 'git://github.com/mislav/will_paginate.git'
 
-gem 'foundation-rails'
+gem 'foundation-rails', '5.4.3.1'
 gem 'rails_12factor', group: :production
 gem 'bxslider-rails'
 gem 'kaminari'

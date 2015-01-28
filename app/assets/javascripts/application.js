@@ -11,13 +11,14 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require jquery.ui.all
+//= require jquery_ujs
+
 //= require jquery.slimscroll.min
 //= require jquery.fullPage
 //= require foundation
 
-//= require ckeditor/override
+//= require ckeditor/config
 //= require ckeditor/init
 //= require cloudinary
 
