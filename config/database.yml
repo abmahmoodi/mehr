@@ -8,8 +8,8 @@ development:
   database: mywebsite
   pool: 5
   host: localhost
-  username: action
-  password:
+  username: postgres
+  password: 1
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,16 +19,16 @@ test: &test
   database: mywebsite
   pool: 5
   host: localhost
-  username: action
-  password:
+  username: postgres
+  password: 1
 
 production:
   adapter: postgresql
   database: mywebsite
   pool: 5
   host: localhost
-  username: action
-  password:
+  username: postgres
+  password: 1
 
 cucumber:
   <<: *test
