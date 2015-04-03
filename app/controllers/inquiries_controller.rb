@@ -24,7 +24,7 @@ class InquiriesController < ApplicationController
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true
 
-    data = "secret=6LcRfv8SAAAAAE6St--SzyTnfRUDm4a1AgHN0WHf&response=#{params[:'g-recaptcha-response']}"
+    data = "secret=6LcV0P4SAAAAALoAtt4mNWyb9WI4f_XN49QqsckG&response=#{params[:'g-recaptcha-response']}"
     headers = {'Content-Type' => 'application/x-www-form-urlencoded'}
     h = http.post(url.path, data, headers)
     res = ActiveSupport::JSON.decode(h.body)
