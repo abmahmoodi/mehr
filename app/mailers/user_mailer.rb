@@ -5,7 +5,7 @@ class UserMailer < ActionMailer::Base
     @name = name
     @email = email
     @message = message
-    mail(to: "msd.soft@gmail.com", subject: "Message from Darestan Report")
+    mail(to: 'msd.soft@gmail.com', subject: 'Message from Rubywebit')
   end
   
   def send_webpage(email, html_content)

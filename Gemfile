@@ -67,3 +67,5 @@ gem 'redcarpet' # For the Markdown parsing
 gem 'pygments.rb'
 gem 'haml'
 gem 'albino'
+
+gem 'recaptcha', :require => 'recaptcha/rails'
